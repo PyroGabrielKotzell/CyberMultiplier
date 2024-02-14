@@ -36,3 +36,4 @@
 CyberMultiplier/obj/*
 CyberMultiplier/bin/*
 *.csproj
+*.zip
