@@ -13,7 +13,8 @@ namespace CyberMultiplier
         public static Plugin instance;
         internal static ManualLogSource mls;
         // LonerGrind
-        internal static ConfigEntry<int> multiplier;
+        internal static ConfigEntry<int> length;
+        internal static ConfigEntry<int> width;
         internal static ConfigEntry<bool> syncIn;
         internal static ConfigEntry<bool> syncOut;
         internal static ConfigEntry<bool> screenCram;
@@ -42,8 +43,8 @@ namespace CyberMultiplier
         public void configs()
         {
             // MorbiusGrind settings
-            multiplier = Config.Bind<int>("CyberGrind", "CyberGrind arena multiplier", 2, "This setting will make the CyberGrind bigger.\n" +
-                "If N is the number given, the CyberGrind will be enlarged to be NxN big.\n(numbers < 1 will be read as 1)");
+            length = Config.Bind<int>("CyberGrind", "CyberGrind arena length", 2, "This setting will set the CyberGrind length.");
+            width = Config.Bind<int>("CyberGrind", "CyberGrind arena width", 2, "This setting will set the CyberGrind width.");
             syncIn = Config.Bind<bool>("CyberGrind", "Start sync", true, "This setting allows the activation of everything at once at the activation of one grid.");
             syncOut = Config.Bind<bool>("CyberGrind", "Change sync", false, "This setting makes grids wait the death of all enemies to change.");
             screenCram = Config.Bind<bool>("CyberGrind", "Screen cram", true, "This setting makes the screen count for all the grids enemies.");
